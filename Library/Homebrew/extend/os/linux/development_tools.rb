@@ -12,6 +12,8 @@ class DevelopmentTools
           path
         elsif File.executable?(path = "/usr/bin/#{tool}")
           Pathname.new path
+        elsif File.executable?(path = "/usr/local/bin/#{tool}")
+          Pathname.new path
         end
       end
     end
